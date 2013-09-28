@@ -14,7 +14,7 @@ import urlparse
 
 
 TEST_MODE=1
-HOST = '172.16.2.186'
+HOST = 'localhost'
 MONGO_PORT=27017
 WAIT_MONGODB=2
 '''

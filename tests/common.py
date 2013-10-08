@@ -16,7 +16,7 @@ import urlparse
 TEST_MODE=1
 HOST = 'localhost'
 MONGO_PORT=27017
-WAIT_MONGODB=2
+WAIT_MONGODB=1
 '''
 TEST_MODE=1 unittest2 mode ,use urllib2
 TEST_MODE=0 django_test mode, use django.test.client
@@ -172,7 +172,7 @@ def sendRequest(api_url,params,type=1):
     elif TEST_MODE and type==0:
         return sendRequestHttplib(api_url,params)
     else:
-        return sendRequestClient(api_url,params)
+        return sendRequestHttplib(api_url,params)
             
             
         
@@ -196,24 +196,7 @@ def sendRequesturllib2(api_url,params):
         rt['http_status']=e.code
     return rt
     
-def sendRequestClient(api_url,params):
-    rt={
-        'http_status':None,
-        'data':{}
-        }
-    data=urllib.urlencode(params)
-    full_url=api_url+'?'+data
-    c=Client()
-    response=c.get(full_url)
-    if response.status_code==200:
-        rt['http_status']=response.status_code
-        rt['data']=json.loads(response.content, encoding='utf-8')
-    elif response.status_code==302:
-        rt['http_status']=response.status_code
-        rt['data']['url']=response.__getitem__('Location')
-    else:
-        rt['http_status']=response.status_code
-    return rt
+
 
 def sendRequestHttplib(api_url,params):
     rt={

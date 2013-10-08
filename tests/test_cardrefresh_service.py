@@ -164,33 +164,43 @@ class CardRefreshServiceTest(unittest.TestCase):
                 w+=1
        
     def test_02_api_cardrefresh_order(self):
+        print 'test_02_api_cardrefresh_order pass'
         pass
        
     def test_03_api_cardrefresh_mod(self):
+        print 'test_03_api_cardrefresh_mod pass'
         pass
     
     def test_04_api_cardrefresh_maxcardnum(self):
+        print 'test_04_api_cardrefresh_maxcardnum pass'
         pass
             
     def test_05_api_cardrefresh_rule_sources_include(self):
+        print 'test_05_api_cardrefresh_rule_sources_include pass'
         pass
            
     def test_06_api_cardrefresh_rule_sources_exclude(self):
+        print 'test_06_api_cardrefresh_rule_sources_exclude pass'
         pass
            
     def test_07_api_cardrefresh_rule_last_modified(self):
+        print 'test_07_api_cardrefresh_rule_last_modified pass'
         pass
 
     def test_08_api_cardrefresh_rule_version(self):
+        print 'test_08_api_cardrefresh_rule_version pass'
         pass
             
     def test_09_api_cardrefresh_screendata(self):
+        print 'test_09_api_cardrefresh_screendata pass'
         pass
         
     def test_10_api_cardrefresh_without_screendata(self):
+        print 'test_10_api_cardrefresh_without_screendata pass'
         pass
     
     def test_11_api_cardrefresh_priority_onlymax(self):
+        print 'test_11_api_cardrefresh_priority_onlymax pass'
         pass
     
       
